@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+#rm -fR /Users/emmu/.oh-my-zsh
+rm -fR $HOME/.oh-my-zsh
+
 # Symlink the .bash_profile configuration file
 if [[ ! -e "$HOME/.bash_profile" ]]; then
   ln -s "$macstrapConfigFolder/configs/macstrap/profile.sh" "$HOME/.bash_profile"
