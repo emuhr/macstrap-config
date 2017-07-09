@@ -69,7 +69,7 @@ echo -e "\t- Enabling full keyboard access for all controls (e.g. enable Tab in 
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 echo -e "\t- Disabling press-and-hold for keys in favor of a key repeat"
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
 
 echo -e "\t- Setting a blazingly fast keyboard repeat rate (ain't nobody got time fo special chars while coding!)"
 defaults write NSGlobalDomain KeyRepeat -int 0
