@@ -43,7 +43,7 @@ alias lv='pwd; ls -R'
 export ZSH=~/.oh-my-zsh
 
 # The ZSH theme to use
-ZSH_THEME="agnoster"
+ZSH_THEME="jreese"
 
 # The plugins to use in the zsh shell
 plugins=(atom git npm bower brew)
@@ -75,3 +75,5 @@ export FIREFOX_BIN="~/Applications/Firefox.app/Contents/MacOS/firefox"
 
 export PATH=$HOME/.jenv/bin:$PATH
 eval "$(jenv init -)"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
