@@ -18,7 +18,7 @@ echo -e "Updating the apps and binaries ..."
 echo
 brew update
 brew upgrade
-brew cask update
+brew cu
 
 # update atom packages
 if test $(which apm); then
