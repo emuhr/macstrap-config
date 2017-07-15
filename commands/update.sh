@@ -24,7 +24,7 @@ brew cu -y
 if test $(which apm); then
   echo -e "Updating atom packages ..."
   echo
-  apm upgrade
+  apm upgrade no-c
 fi
 
 # update npm packages
