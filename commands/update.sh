@@ -11,14 +11,14 @@ echo
 # update OS X software packages
 echo -e "Updating the OS X app store applications ..."
 echo
-softwareupdate -ia
+softwareupdate -ir
 
 # update brew and cask packages
 echo -e "Updating the apps and binaries ..."
 echo
 brew update
 brew upgrade
-brew cu
+brew cu -y
 
 # update atom packages
 if test $(which apm); then
