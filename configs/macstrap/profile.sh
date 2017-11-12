@@ -46,7 +46,8 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="jreese"
 
 # The plugins to use in the zsh shell
-plugins=(atom git npm bower brew)
+#plugins=(atom git npm bower brew wd command-not-found common-aliases)
+plugins=(atom git npm bower)
 
 # Load the oh-my-zsh configuraiton file
 source $ZSH/oh-my-zsh.sh
@@ -77,3 +78,10 @@ export PATH=$HOME/.jenv/bin:$PATH
 eval "$(jenv init -)"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+#############
+# Java home #
+#############
+export JAVA_HOME=$(/usr/libexec/java_home)
