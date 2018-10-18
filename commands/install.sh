@@ -69,5 +69,4 @@ fi
 echo -e "Cleanup homebrew and homebrew cask ..."
 echo
 brew cleanup
-brew cask cleanup
 
