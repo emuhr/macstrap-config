@@ -35,6 +35,12 @@ alias ll='pwd; ls -1ah'
 # Display the insides of a particular directory
 alias lv='pwd; ls -R'
 
+alias cf-bentley-dev='cf login -a https://api.sys.cf.portal-dev.bentleymotors.com -u emanuel.muhr@mhp.com -o Bentley-Development -s development'
+alias cf-bentley-prod='cf login -a https://api.sys.cf.portal.bentleymotors.com -u emanuel.muhr@mhp.com'
+alias cf-bentley-qa='cf login -a https://api.sys.cf.portal-dev.bentleymotors.com -u emanuel.muhr@mhp.com -o Bentley-QualityAssurance -s test'
+alias cf-gravity-vehicle-dev='cf login -a https://api.sys.emea.vwapps.io -u emanuel.muhr@mhp.com -o Gravity -s vehicle-dev'
+alias cf-gravity-business-dev='cf login -a https://api.sys.emea.vwapps.io -u emanuel.muhr@mhp.com -o Gravity -s business-dev'
+
 ###########################
 # Oh-my-zsh configuration #
 ###########################
@@ -84,4 +90,18 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 #############
 # Java home #
 #############
-export JAVA_HOME=$(/usr/libexec/java_home)
+# set 1.8 for compatibility (e.g. gatling)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+###############
+# node 8 hack #
+###############
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+
+export TASTE_API_KEY=312118-testapp-HRM5EH2K
+
+##############
+# kubectl    #
+############## 
+export PATH=$HOME/bin:$PATH
+if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
